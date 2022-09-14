@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tip Test</string>
+    <string name="cost_of_service">Cost of Service</string>
+    <string name="how_was_the_service">How was the service?</string>
+    <string name="amazing_20">Amazing (20%)</string>
+    <string name="good_18">Good (18%)</string>
+    <string name="okay_15">Okay (15%)</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="calculate">Calculate</string>
+    <string name="shared_bill_tip">Shared bill tip?</string>
+    <string name="number_of_payers">Number of payers</string>
+<!--    show result text below-->
+    <string name="tip_amount">Tip Amount: %s</string>
+    <string name="total_result">Total: %s</string>
+    <string name="tip_per_payer">Tip per payer: %s</string>
+    <string name="total_per_payer">Total per payer: %s</string>
+</resources>
