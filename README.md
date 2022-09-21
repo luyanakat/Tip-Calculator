@@ -2,6 +2,8 @@
 
 A simple tip calulator app for Android
 
+![Screenshot](./Screenshot_20220921_122606.png)
+
 ## What does this app do?
 
 The Tip Calculator calculates tip amount for three most-used percentages (based on the service's quality) of the  cost of the service, and also provides a total amount that includes the  tip.
