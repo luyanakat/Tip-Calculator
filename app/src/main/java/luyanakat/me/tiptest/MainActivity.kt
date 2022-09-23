@@ -15,7 +15,6 @@ import kotlin.math.ceil
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private fun Double.format(digits: Int) = "%.${digits}f".format(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +30,12 @@ class MainActivity : AppCompatActivity() {
                 binding.iconPayer.visibility = View.GONE
                 binding.sharedBillTipNumberAdd.visibility = View.GONE
                 binding.sharedBillTipNumber.visibility = View.GONE
-                binding.resultText.text = ""
+                binding.resultTotalPerPayer.text = ""
                 binding.resultTipPerPayer.text = ""
+                binding.resultTextTotal.text = ""
             }
-            binding.calculateBtn.setOnClickListener { calculatedTip() }
         }
+        binding.calculateBtn.setOnClickListener { calculatedTip() }
     }
 
 
@@ -92,21 +92,5 @@ class MainActivity : AppCompatActivity() {
             binding.resultTotalPerPayer.text = getString(R.string.total_per_payer,
                 formattedTotalPerPayer)
         }
-
-
-    }
-
-    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_ENTER) {
-            // Hide the keyboard
-            val inputMethodManager =
-                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
-            return true
-        }
-        return false
-    }
-    fun toggleView(view: View) {
-        view.isVisible = !view.isVisible
     }
 }
