@@ -14,5 +14,8 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="Widget.TipTime.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
     </style>
 </resources>

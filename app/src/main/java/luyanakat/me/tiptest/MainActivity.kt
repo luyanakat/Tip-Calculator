@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding.calculateBtn.setOnClickListener { calculatedTip() }
+
+        binding.costOfServiceEditText.setOnKeyListener{
+                view, keyCode, _ -> handleKeyEvent(view, keyCode)
+        }
     }
 
 
@@ -93,4 +97,15 @@ class MainActivity : AppCompatActivity() {
                 formattedTotalPerPayer)
         }
     }
+    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_ENTER) {
+            // Hide the keyboard
+            val inputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+            return true
+        }
+        return false
+    }
+
 }
